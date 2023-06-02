@@ -1,0 +1,134 @@
+/* Regras Universais, como largura e altura do elemento incluem seu preenchimento e bordas, evitando muito espaçamento e mais linhas de código */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilização e alinhamento do body */
+body {
+  font-size: 16px;
+  height: 100%;
+  max-width: 90%;
+  background: #4c5958;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilização do input que esta servindo como tela */
+input {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Estilização dos elementos dentro da calculado, como a quantidade de elementos por linhas e sua posição */
+.calculator {
+  background: #8aa6a3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  width: 325px;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 16px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+
+}
+
+/* Estilização da "tela" da calculadora*/
+.screen {
+  grid-column: 1 / 5;
+  border-radius: 0.75rem;
+  font-size: 2rem;
+  height: 6rem;
+  color: #fff;
+  background: #22312c;
+  text-align: end;
+  padding: 0.5rem;
+  cursor: default;
+}
+
+/*Cor do número da calculadora*/
+::placeholder {
+  color: #fff;
+}
+
+/* Estilização de todos os botões da calculadora abaixo, desde passar o mouse em cima, até a ação do click */
+.symbol,
+.number,
+.linkedin,
+.github, .linkedinLink>div
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1;
+  font-size: 1.25rem;
+  color: #fff;
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+.symbol {
+  background: #10403b;
+}
+
+.symbol:hover {
+  background: #175852;
+}
+
+.number {
+  background: #127369;
+}
+
+.number:hover {
+  background: #3d928ac4;
+}
+
+.github {
+  background-color: black;
+}
+
+.linkedin {
+  background-color: #0277b7;
+}
+
+.github:hover {
+  opacity: 40;
+}
+
+#calcButton:active {
+  background-color: orange;
+}
+
+/* Estilizações referentes ao rodapé da página*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #162b2e;
+}
+
+footer div {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  height: 60px;
+  background-color: #162b2e;
+}
